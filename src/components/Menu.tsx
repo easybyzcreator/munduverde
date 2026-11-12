@@ -1707,7 +1707,7 @@ export default function Menu({ settings: initialSettings }: { settings: Settings
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
-          className="glass max-w-sm w-full rounded-3xl p-6 sm:p-8 border border-white/20 shadow-2xl flex flex-col items-center text-center space-y-6 sm:space-y-8"
+          className="glass max-w-sm w-full rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col items-center text-center space-y-6 sm:space-y-8"
         >
           {/* Logo Frame */}
           <div className="relative mt-2">
@@ -1845,7 +1845,7 @@ export default function Menu({ settings: initialSettings }: { settings: Settings
         const lines = text.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
         if (lines.length > 0) {
           return (
-            <div className="flex flex-col items-center mb-12 max-w-sm mx-auto bg-white/40 backdrop-blur-md p-5 rounded-[2rem] border border-white/20 shadow-md">
+            <div className="flex flex-col items-center mb-12 max-w-sm mx-auto bg-white/70 backdrop-blur-md p-5 rounded-[2rem] border border-black/[0.08] shadow-[0_4px_16px_-2px_rgba(0,0,0,0.06),0_2px_6px_-1px_rgba(0,0,0,0.03),inset_0_1px_0_0_rgba(255,255,255,0.7)]">
               <ul className="text-left space-y-2.5 text-xs text-black/80 font-sans font-semibold">
                 {lines.map((line, idx) => (
                   <li key={idx} className="flex items-start gap-2">
@@ -1883,7 +1883,7 @@ export default function Menu({ settings: initialSettings }: { settings: Settings
 
             return (
               <div key={category.id ? `menu-cat-${category.id}-${catIdx}` : `menu-cat-${catIdx}`} className="space-y-6">
-                <div className="border-b border-white/20 pb-2">
+                <div className="border-b border-black/[0.08] pb-2">
                   <h2 className="text-2xl sm:text-3xl font-serif font-black tracking-tight" style={{ color: settings.categoryTextColor || settings.primaryColor }}>
                     {category.title}
                   </h2>
@@ -2375,7 +2375,7 @@ export default function Menu({ settings: initialSettings }: { settings: Settings
                         const product = products.find(p => p.id === item.productId);
                         if (!product) return null;
                         return (
-                          <div key={item.id ? `cart-item-${item.id}-${idx}` : `cart-item-${idx}`} className="bg-white/50 p-3.5 rounded-2xl border border-white/30 w-full shadow-sm space-y-2.5">
+                          <div key={item.id ? `cart-item-${item.id}-${idx}` : `cart-item-${idx}`} className="bg-white/70 p-3.5 rounded-2xl border border-black/[0.08] w-full shadow-xs space-y-2.5">
                             {/* Top row: Image + Full width Title and Badges */}
                             <div className="flex items-start gap-3 w-full">
                               <img 
@@ -3148,13 +3148,13 @@ export default function Menu({ settings: initialSettings }: { settings: Settings
                     {(settings.infoBlock1Title || settings.infoBlock1Text || settings.infoBlock2Title || settings.infoBlock2Text) && (
                       <div className="grid grid-cols-1 gap-3">
                         {settings.infoBlock1Title && (
-                          <div className="bg-white/50 p-4 rounded-2xl border border-white/20 shadow-sm">
+                          <div className="bg-white/70 p-4 rounded-2xl border border-black/[0.08] shadow-xs">
                             <h4 className="text-[10px] font-bold uppercase tracking-wider mb-1" style={{ color: '#000000' }}>{settings.infoBlock1Title}</h4>
                             <p className="text-[10px] leading-relaxed" style={{ color: '#000000' }}>{settings.infoBlock1Text}</p>
                           </div>
                         )}
                         {settings.infoBlock2Title && (
-                          <div className="bg-white/50 p-4 rounded-2xl border border-white/20 shadow-sm">
+                          <div className="bg-white/70 p-4 rounded-2xl border border-black/[0.08] shadow-xs">
                             <h4 className="text-[10px] font-bold uppercase tracking-wider mb-1" style={{ color: '#000000' }}>{settings.infoBlock2Title}</h4>
                             <p className="text-[10px] leading-relaxed" style={{ color: '#000000' }}>{settings.infoBlock2Text}</p>
                           </div>
@@ -6351,7 +6351,7 @@ export default function Menu({ settings: initialSettings }: { settings: Settings
                     
                     <div className="space-y-3">
                       {/* Item 1 */}
-                      <div className="bg-white/70 p-3 rounded-2xl border border-white/30 flex items-center justify-between shadow-sm hover:shadow transition-shadow">
+                      <div className="bg-white/70 p-3 rounded-2xl border border-black/[0.08] flex items-center justify-between shadow-xs hover:shadow transition-shadow">
                         <div>
                           <h4 className="font-extrabold text-xs text-black">Cocktail Size Cheese Bread</h4>
                           <p className="text-[10px] text-gray-500 font-semibold">1kg packet • bite-sized, ideal for cafes & catering</p>
@@ -6377,7 +6377,7 @@ export default function Menu({ settings: initialSettings }: { settings: Settings
                       </div>
 
                       {/* Item 2 */}
-                      <div className="bg-white/70 p-3 rounded-2xl border border-white/30 flex items-center justify-between shadow-sm hover:shadow transition-shadow">
+                      <div className="bg-white/70 p-3 rounded-2xl border border-black/[0.08] flex items-center justify-between shadow-xs hover:shadow transition-shadow">
                         <div>
                           <h4 className="font-extrabold text-xs text-black">Medium Size Cheese Bread</h4>
                           <p className="text-[10px] text-gray-500 font-semibold">1kg packet • traditional classic café snack sizing</p>
@@ -6403,7 +6403,7 @@ export default function Menu({ settings: initialSettings }: { settings: Settings
                       </div>
 
                       {/* Item 3 */}
-                      <div className="bg-white/70 p-3 rounded-2xl border border-white/30 flex items-center justify-between shadow-sm hover:shadow transition-shadow">
+                      <div className="bg-white/70 p-3 rounded-2xl border border-black/[0.08] flex items-center justify-between shadow-xs hover:shadow transition-shadow">
                         <div>
                           <h4 className="font-extrabold text-xs text-black">Large Premium Cheese Bread</h4>
                           <p className="text-[10px] text-gray-500 font-semibold">1kg packet • gourmet display-counter large size</p>

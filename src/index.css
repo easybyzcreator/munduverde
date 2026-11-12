@@ -28,10 +28,18 @@ input[type="number"] {
 }
 
 .glass {
-  @apply backdrop-blur-lg border border-white/20;
-  background-color: var(--glass-color, rgba(255, 255, 255, 0.4));
+  @apply backdrop-blur-lg;
+  background-color: var(--glass-color, rgba(255, 255, 255, 0.6));
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.03), inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
+}
+
+/* Static discrete box contour for clear separation on flat backgrounds */
+.static-box-contour {
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.03), inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
 }
 
 :where(h1, h2, h3, h4, h5, h6) {

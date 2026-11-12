@@ -4274,7 +4274,7 @@ TOTAL: ${currencySymbol} ${orderTotalStr}
 
   return (
     <div className="flex-grow flex flex-col md:flex-row md:h-screen md:overflow-hidden text-gray-900">
-      <div className="w-full md:w-64 glass border-r border-white/20 p-4 md:p-6 flex flex-col gap-4 md:gap-8 md:overflow-y-auto">
+      <div className="w-full md:w-64 glass border-r border-black/[0.08] p-4 md:p-6 flex flex-col gap-4 md:gap-8 md:overflow-y-auto">
         <div className="flex items-center gap-3">
           <div className="h-12 w-12 flex items-center justify-center rounded-full overflow-hidden border border-white/50 bg-white shadow-sm">
             <img src={settings?.logo} alt="Logo" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
@@ -5347,7 +5347,7 @@ TOTAL: ${currencySymbol} ${orderTotalStr}
                     </div>
 
                     {/* Image uploads grid - 6 separate slots */}
-                    <div className="bg-white/60 border border-white/30 rounded-2xl p-3 mt-2 shadow-sm">
+                    <div className="bg-white/75 border border-black/[0.08] rounded-2xl p-3 mt-2 shadow-xs">
                       <p className="text-[11px] font-bold text-gray-950 leading-relaxed text-center">
                         Gerencie as 6 imagens da galeria de forma independente abaixo. Clique em um espaço para fazer upload ou apague para remover.
                       </p>
@@ -6725,12 +6725,12 @@ TOTAL: ${currencySymbol} ${orderTotalStr}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
                   <div className="md:col-span-2 space-y-4">
                     <div className="flex flex-col sm:flex-row items-center gap-3">
-                      <div className="flex-grow w-full glass p-4 rounded-2xl font-mono text-xs break-all border border-white/10" style={{ color: settings?.textColor || 'inherit' }}>
+                      <div className="flex-grow w-full glass p-4 rounded-2xl font-mono text-xs break-all" style={{ color: settings?.textColor || 'inherit' }}>
                         {`${window.location.origin}/?slug=${settings?.slug || 'easy-cake-menu'}`}
                       </div>
                       <button 
                         onClick={copyLink}
-                        className="w-full sm:w-auto px-5 py-3 rounded-xl font-bold transition-all uppercase tracking-wider text-xs active:scale-95 text-center cursor-pointer border border-white/10 hover:bg-white/5 whitespace-nowrap"
+                        className="w-full sm:w-auto px-5 py-3 rounded-xl font-bold transition-all uppercase tracking-wider text-xs active:scale-95 text-center cursor-pointer border border-black/[0.08] bg-white/70 hover:bg-white whitespace-nowrap shadow-xs"
                         style={{ color: settings?.primaryColor || '#865d39' }}
                       >
                         {copied ? 'COPIADO!' : 'COPIAR LINK'}
@@ -6743,7 +6743,7 @@ TOTAL: ${currencySymbol} ${orderTotalStr}
                     </div>
                   </div>
 
-                  <div className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 space-y-3">
+                  <div className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/40 border border-black/[0.08] space-y-3 shadow-xs">
                     <div className="p-3 bg-white rounded-xl shadow-md">
                       <img 
                         src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(`${window.location.origin}/?slug=${settings?.slug || 'easy-cake-menu'}`)}`}
@@ -7276,7 +7276,7 @@ TOTAL: ${currencySymbol} ${orderTotalStr}
               </button>
             </div>
 
-            <form onSubmit={handleAddProduct} className="glass p-6 md:p-8 rounded-2xl space-y-6 text-black border border-white/40 shadow-sm">
+            <form onSubmit={handleAddProduct} className="glass p-6 md:p-8 rounded-2xl space-y-6 text-black shadow-sm">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-gray-200">
                 <div>
                   <h3 className="text-xl md:text-2xl font-serif font-bold text-gray-900 flex items-center gap-2">
@@ -9645,7 +9645,7 @@ TOTAL: ${currencySymbol} ${orderTotalStr}
                   <div className="space-y-2">
                     {Object.entries(batchSummary.items).length > 0 ? (
                       Object.entries(batchSummary.items).map(([title, qty]) => (
-                        <div key={title} className="flex justify-between items-center p-3 bg-white/50 rounded-xl border border-white/20">
+                        <div key={title} className="flex justify-between items-center p-3 bg-white/75 rounded-xl border border-black/[0.08] shadow-2xs">
                           <span className="font-bold">{title}</span>
                           <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-bold">{qty}x</span>
                         </div>
@@ -9664,7 +9664,7 @@ TOTAL: ${currencySymbol} ${orderTotalStr}
                   <div className="space-y-2">
                     {Object.entries(batchSummary.sides).length > 0 ? (
                       Object.entries(batchSummary.sides).map(([name, qty]) => (
-                        <div key={name} className="flex justify-between items-center p-3 bg-white/50 rounded-xl border border-white/20">
+                        <div key={name} className="flex justify-between items-center p-3 bg-white/75 rounded-xl border border-black/[0.08] shadow-2xs">
                           <span className="font-bold">{name}</span>
                           <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full font-bold">{qty}x</span>
                         </div>
@@ -9683,7 +9683,7 @@ TOTAL: ${currencySymbol} ${orderTotalStr}
                   layout
                   key={order.id ? `adm-order-${order.id}-${idx}` : `adm-order-${idx}`} 
                   id={`order-${order.id}`}
-                  className="glass p-6 rounded-2xl space-y-4 border border-white/20"
+                  className="glass p-6 rounded-2xl space-y-4 shadow-xs"
                 >
                   <div className="flex flex-col md:flex-row justify-between gap-4">
                     <div className="space-y-1">
@@ -9920,7 +9920,7 @@ TOTAL: ${currencySymbol} ${orderTotalStr}
                             <div className="font-bold uppercase opacity-40 text-[10px]">
                               {(order.isB2B || order.isPJ) ? "Endereço Comercial / Delivery" : "Endereço de Entrega/Retirada"}
                             </div>
-                            <div className="p-3 bg-white/50 rounded-lg border border-white/20 font-medium">
+                            <div className="p-3 bg-white/70 rounded-lg border border-black/[0.08] shadow-2xs font-medium">
                               {order.b2bAddress || order.address}
                             </div>
                           </div>
@@ -9944,7 +9944,7 @@ TOTAL: ${currencySymbol} ${orderTotalStr}
 
                           <div className="space-y-1 md:col-span-2">
                             <div className="font-bold uppercase opacity-40 text-[10px]">Observações / Requisitos Especiais</div>
-                            <div className="p-3 bg-white/50 rounded-lg border border-white/20 italic">
+                            <div className="p-3 bg-white/70 rounded-lg border border-black/[0.08] shadow-2xs italic">
                               {order.observation || 'Nenhuma observação informada.'}
                             </div>
                           </div>

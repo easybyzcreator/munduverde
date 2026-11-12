@@ -21,7 +21,7 @@ export default function App() {
     slogan: 'Alimentação saudável e consciente.',
     whatsappClosingMessage: 'Obrigada pelo interesse, aguarde que entraremos em contato para confirmação!',
     backgroundImage: 'https://i.ibb.co/X0vYy7L/cakes.png',
-    glassColor: 'rgba(255, 255, 255, 0.4)',
+    glassColor: 'rgba(255, 255, 255, 0.6)',
     textColor: '#000000',
     categoryTextColor: '#000000',
     brandNameColor: '#000000',
