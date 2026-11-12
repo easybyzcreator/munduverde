@@ -1,0 +1,22 @@
+{
+  "name": "Mundu Verde",
+  "short_name": "Mundu Verde",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#865d39",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/easybyzcreator/imagens/75d6e3b43478a67c1281736be049a589bc695243/pwa%20mundu%20verde.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/easybyzcreator/imagens/75d6e3b43478a67c1281736be049a589bc695243/pwa%20mundu%20verde.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
